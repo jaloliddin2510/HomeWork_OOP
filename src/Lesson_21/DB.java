@@ -7,6 +7,8 @@ public class DB {
 
     public List<MainData> mediaPlayer =new ArrayList<>();
 
+
+
     public void addData(MainData mainData){
 
         mediaPlayer.add(mainData);
