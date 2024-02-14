@@ -1,13 +1,13 @@
 package Lesson_26;
 
+import Lesson_25.List.UzumList;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.function.Consumer;
 
 public class DataBase {
     private static DataBase base = null;
-    private final ArrayList<UserPerson> user = new ArrayList<>();
+    private final UzumList<UserPerson> user = new UzumList<>();
     private final Scanner scanner = new Scanner(System.in);
     private final Consumer<String> listener = System.out::println;
     private final LoginSignFunc<Sign, String> signListener = (sign, number) -> {
@@ -37,8 +37,6 @@ public class DataBase {
     private DataBase() {
     }
 
-    ;
-
     public static DataBase getInstance() {
         if (base == null) {
             base = new DataBase();
@@ -61,8 +59,11 @@ public class DataBase {
     }
 
     private boolean isUserExist(String phoneNumber) {
-        for (UserPerson userPerson : user) {
-            return (userPerson.getPhoneNumber().equals(phoneNumber));
+        for (int i = 0; i < user.size(); i++) {
+            UserPerson userPerson = user.get(i);
+            if (userPerson.getPhoneNumber().equals(phoneNumber)) {
+                return true;
+            }
         }
         return false;
     }
@@ -72,12 +73,18 @@ public class DataBase {
     }
 
     private void login(String number, String password) {
-        for (UserPerson userPerson : user) {
+        boolean loginIn = false;
+        for (int i = 0; i < user.size(); i++) {
+            UserPerson userPerson = user.get(i);
             if (userPerson.getPhoneNumber().equals(number) && userPerson.getPassword().equals(password)) {
+                loginIn = true;
                 System.out.println("Tizimdasiz");
-            } else {
-                listener.accept("Kirolmadingiz");
+                break;
             }
         }
+        if (!loginIn) {
+            listener.accept("Kirolmadingiz");
+        }
     }
+
 }

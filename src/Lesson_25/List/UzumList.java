@@ -213,6 +213,30 @@ public class UzumList<T> implements ParentList<T> {
         obj=objects;
         return element;
     }
+
+    transient Object[] elementData;
+    @Override
+    public int indexOf(Object o) {
+        return indexOfRange(o, 0, size);
+    }
+    int indexOfRange(Object o, int start, int end) {
+        Object[] es = elementData;
+        if (o == null) {
+            for (int i = start; i < end; i++) {
+                if (es[i] == null) {
+                    return i;
+                }
+            }
+        } else {
+            for (int i = start; i < end; i++) {
+                if (o.equals(es[i])) {
+                    return i;
+                }
+            }
+        }
+        return -1;
+    }
+
     @Override
     public String toString(){
         Object[] objects=new Object[size()];
