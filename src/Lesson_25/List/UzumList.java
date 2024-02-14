@@ -1,6 +1,6 @@
-package NewList.List;
+package Lesson_25.List;
 
-import NewList.ParentList;
+import Lesson_25.ParentList;
 
 import java.util.Arrays;
 import java.util.Collection;

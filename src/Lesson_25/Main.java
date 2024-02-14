@@ -1,6 +1,6 @@
-package NewList;
+package Lesson_25;
 
-import NewList.List.UzumList;
+import Lesson_25.List.UzumList;
 
 public class Main {
     public static void main(String[] args) {

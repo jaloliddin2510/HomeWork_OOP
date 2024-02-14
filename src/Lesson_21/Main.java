@@ -1,6 +1,7 @@
 package Lesson_21;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -32,7 +33,10 @@ public class Main {
         dataBase.addData(mainData2);
         dataBase.addData(mainData3);
         dataBase.addData(mainData4);
-
+        dataBase.addData(mainData1);
+        dataBase.addData(mainData2);
+        dataBase.addData(mainData3);
+        dataBase.addData(mainData4);
 
     }
 
