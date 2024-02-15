@@ -1,6 +1,7 @@
 package Lesson_27.BuilderPattern;
 
 public class ConcreteHome implements HomeBuilder{
+    // ConcreteBuilder
     private HomeType homeType;
     private String homeField;
     private String homeCost;

@@ -3,6 +3,7 @@ package Lesson_27.BuilderPattern;
 import java.util.Random;
 
 public class Director {
+    // Director
     public void createApart(HomeBuilder homeBuilder, Location location){
         homeBuilder.setHomeType(HomeType.APART);
         homeBuilder.setHomeField(String.valueOf(new Random().nextLong(150)));

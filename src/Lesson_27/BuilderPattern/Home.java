@@ -1,6 +1,7 @@
 package Lesson_27.BuilderPattern;
 
 public class Home {
+    //Product
     private final HomeType homeType;
     private final String homeField;
     private final String homeCost;
@@ -21,16 +22,13 @@ public class Home {
         return homeField;
     }
 
-
     public String getHomeCost() {
         return homeCost;
     }
 
-
     public Location getHomeLocation() {
         return homeLocation;
     }
-
 
     @Override
     public String toString() {
