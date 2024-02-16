@@ -8,5 +8,6 @@ public class Main {
         System.out.println(atm.isGetMoney(60000));
         atm.getBalance();
         atm.moneyInfo(money);
+
     }
 }
