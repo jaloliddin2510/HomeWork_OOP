@@ -1,4 +1,5 @@
 package Lesson_33;
+
 public class RaceCondition {
     public static void main(String[] args) {
         Thread t1 = new Thread(new MyThread1());
